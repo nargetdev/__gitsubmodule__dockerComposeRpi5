@@ -1,0 +1,3 @@
+docker run --rm --network host -v /home/five/telem/telem.toml:/etc/telegraf/telegraf.conf:ro -e INFLUX_TOKEN=uWM4SyrMUSRg0WbQFZQVUZ8mmw9n8OIpsj2FDY1Oft05Z6w9HTjgyn6p5ENP79BknWZOz1xUdklnKgULEmDQdQ== telegraf:latest
+docker run --rm -d --name emqx -p 18083:18083 -p 1883:1883 emqx:latest
+docker run -d --name influxdb2 -p 8086:8086 -v influxdb2-data:/var/lib/influxdb2 -e DOCKER_INFLUXDB_INIT_MODE=setup -e DOCKER_INFLUXDB_INIT_USERNAME=admin -e DOCKER_INFLUXDB_INIT_PASSWORD=your_secure_password -e DOCKER_INFLUXDB_INIT_ORG=your_organization -e DOCKER_INFLUXDB_INIT_BUCKET=your_bucket influxdb:2.7
