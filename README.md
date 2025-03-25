@@ -2,6 +2,11 @@
 
 This repository contains the Docker setup for a complete van monitoring system using MQTT, InfluxDB, and Telegraf. The system collects data from an Alpicool refrigerator and a Bluetti power station via ESP32-based Bluetooth to MQTT bridges.
 
+# Dashboard
+<img width="1840" alt="image" src="https://github.com/user-attachments/assets/4d463e30-7ca2-48e5-95f3-a6a11eef503e" />
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/d43fdc26-be3b-4fa2-a59d-95bd130aad35" />
+
+
 ## Architecture
 
 The system consists of:
