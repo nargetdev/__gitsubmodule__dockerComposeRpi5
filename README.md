@@ -201,3 +201,37 @@ docker run --rm --network host -v $(pwd)/telegraf/debug-alpicool.toml:/etc/teleg
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+## ESP32 setup:
+
+
+### Alpicool
+
+```config.h
+// wifi SSID
+#define  WIFI_SSID "YOUR SSID" 
+// wifi password
+#define  WIFI_PASS "YOUR PASS"
+// mqtt server. "192.168.0.1" or wherever your server at.
+#define  MQTT_SERVER "192.168.1.82"
+//mqtt user. anonynymous mqqt brokers are not supported
+#define  MQTT_USER "mqtt_user"
+//mqtt password
+#define  MQTT_PASSWORD "mqtt_password"
+//Ble adress of the fridge
+#define  FRIDGE_BLE_ADDRESS  "0b:35:33:34:1f:3c"
+```\config.h
+
+### Bluetti:
+
+An AP will be posted initially to set things up.. it can also be placed in code:
+
+```BWifi.cpp
+...
+char mqtt_server[40] = "127.0.0.1";
+char mqtt_port[6]  = "1883";
+char bluetti_device_id[40] = "e.g. ACXXXYYYYYYYY";
+...
+```
+
